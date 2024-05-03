@@ -171,6 +171,13 @@ body {
     padding: 10px;
     margin: 0;
 }
+.champions-league-section {
+    border: 2px solid #00529F;  /* Solid border using the theme color */
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #f4f4f4;  /* Light gray background for better visibility */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* Optional shadow for a subtle depth effect */
+}
 
 /* Header and Navigation Styles */
 .header {
@@ -209,9 +216,7 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds shadow for depth */
 }
 
-.mySlides {
-    display: none;
-}
+
 
 .fade {
     animation-name: fade;
@@ -288,6 +293,15 @@ body {
     height: auto; /* Maintain aspect ratio */
     margin: 0 auto; /* Center the image horizontally */
 }
+
+.la-liga-section {
+    border: 2px solid #00529F;  /* Example of a solid border with a theme color */
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #a2a7af;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* Optional shadow for depth */
+}
+
 
 .la-liga-standings table {
     width: 100%;
@@ -383,7 +397,7 @@ h1, h2 {
 }
 
 /* Slideshow container */
-.slideshow-container {
+.slideshow-container1 {
     position: relative;
     max-width: 1000px;  /* Adjust this to fit your site's design */
     margin: auto;
@@ -391,7 +405,7 @@ h1, h2 {
 }
 
 /* Style the images */
-.mySlides img {
+.mySlides1 img {
     width: 100%;  /* Makes images fill the container */
     height: 500px;  /* Fixed height for all images */
     object-fit: cover;  /* Ensures images cover the area without distorting aspect ratios */
@@ -403,27 +417,41 @@ h1, h2 {
     header {
         flex-direction: column; /* Stacks the logo and navigation vertically */
         align-items: center; /* Aligns items to the center */
+        padding: 10px 0; /* Adds padding for better spacing */
     }
 
     nav ul {
         flex-direction: column; /* Stacks nav items vertically */
         width: 100%; /* Full width */
+        padding: 0; /* Removes any default padding */
     }
 
     nav ul li {
         text-align: center; /* Centers the links */
         width: 100%; /* Full width */
+        padding: 10px 0; /* Adds vertical padding for better tap targets */
     }
+
+    .nav-list a {
+        display: block; /* Makes the link fill the li element for easier tapping */
+        padding: 10px; /* Adds padding to increase the tap area */
+    }
+
     .mySlides img {
-        height: 300px;  /* Smaller height for smaller devices */
+        min-height: 200px;  /* Ensures images are not too small */
     }
 
     .slideshow-container {
-        height: 300px;  /* Matching the new image height */
+        width: 100%; /* Ensures the container is responsive */
+        height: auto; /* Adjusts height based on image height */
+        max-height: 300px; /* Limits the container height */
     }
+
     .sponsors {
         width: 100%; /* Full width on mobile */
-        max-width: 90%; /* Limit width to 90% for better readability */
-        margin: 0 auto; /* Center horizontally */
+        max-width: none; /* Allows the image to use up to 100% of the width */
+        margin: 10px auto; /* Centers the image and adds vertical spacing */
+        display: block; /* Ensures the image is treated as a block-level element */
+        height: auto; /* Maintains the aspect ratio of the sponsors image */
     }
 }
