@@ -411,10 +411,7 @@ h1, h2 {
     object-fit: cover;  /* Ensures images cover the area without distorting aspect ratios */
 }
 
-
-
 @media (max-width: 760px) {
-   
     nav ul {
         flex-direction: column; /* Stacks nav items vertically */
         width: 100%; /* Full width */
@@ -449,11 +446,12 @@ h1, h2 {
         display: block; /* Ensures the image is treated as a block-level element */
         height: auto; /* Maintains the aspect ratio of the sponsors image */
     }
-}
-.la-liga-standings {
-    width: 100%; /* Make the table width 100% to fit within the available space */
-    overflow-x: auto; /* Add horizontal scroll if the table overflows */
-}
+
+    .la-liga-standings {
+        width: 100%; /* Make the table width 100% to fit within the available space */
+        overflow-x: auto; /* Add horizontal scroll if the table overflows */
+    }
+
     .team-content {
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items horizontally */
@@ -471,9 +469,11 @@ h1, h2 {
         margin-left: auto; /* Align to the left */
         margin-right: auto; /* Align to the right */
         max-width: 300px; /* Limit the maximum width of the description */
-    
+    }
+
     header {
         flex-direction: column; /* Stacks the logo and navigation vertically */
         align-items: center; /* Aligns items to the center */
         padding: 10px 0; /* Adds padding for better spacing */
     }
+}
