@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Madrid - Champions League</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <img src="images/RMLOGO.png" alt="Real Madrid Logo" id="logo">
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="champions_league.html">Champions League</a></li>
+                <li><a href="laliga.html">La Liga</a></li>
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="ucl-history">
+            <h1>UEFA Champions League</h1>
+            <div class="slideshow-container">
+                <!-- Each "mySlides" div represents one slide -->
+                <div class="mySlides fade">
+                    <img src="images/RM1.png" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/RM2.png" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/RM3.png" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/RM4.png" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/RM5.png" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/RM6.png" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/RM7.png" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/RM8.png" style="width:100%">
+                </div>
+                <!-- Optional: dynamically generated dots for navigation -->
+                <div class="dot-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                    <span class="dot" onclick="currentSlide(8)"></span>
+                </div>
+                <div class="countdown-container">
+                    <h2>Next Game Countdown: Real Madrid vs Bayern Munich</h2>
+                    <div id="countdown">
+                        <p>Match starts in: <span id="timer"></span></p>
+                    </div>
+                </div>
+                                <div class="match-info-container">
+                    <img src="images/UCLGAME.png" alt="UEFA Champions League: Real Madrid vs Bayern Munich">
+                </div>
+    </main>
+    <button onclick="scrollToTop()" id="return-to-top">↑</button>
+
+    <footer class="site-footer">
+        <p>&copy; <script>document.write(new Date().getFullYear());</script> Real Madrid FC. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:contact@realmadridfansite.com">contact@realmadridfansite.com</a>.</p>
+    </footer>
+    <script src="js/countdown.js"></script>
+</body>
+</html>
