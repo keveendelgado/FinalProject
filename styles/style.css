@@ -287,11 +287,10 @@ body {
 }
 
 
-
 @media (max-width: 700px) {
     header {
         flex-direction: column; /* Stacks the logo and navigation vertically */
-        align-items: flex-start; /* Aligns items to the left */
+        align-items: center; /* Aligns items to the center */
     }
 
     nav ul {
@@ -303,6 +302,10 @@ body {
         text-align: center; /* Centers the links */
         width: 100%; /* Full width */
     }
+
     .sponsors {
-        width: 90%; /* Slightly smaller on mobile to fit the screen better */
+        width: 100%; /* Full width on mobile */
+        max-width: 90%; /* Limit width to 90% for better readability */
+        margin: 0 auto; /* Center horizontally */
+    }
 }
