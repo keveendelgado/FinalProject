@@ -24,6 +24,10 @@
 #return-to-top:hover {
     background-color: #000000; /* Button background color on hover */
 }
+nav {
+    overflow-x: hidden; /* Hide horizontal overflow */
+    width: 90%; /* Ensure nav is full width */
+}
 
 body {
     font-family: 'Cardo', serif; /* Applying Cardo to the body text */
@@ -412,21 +416,39 @@ h1, h2 {
 }
 
 @media (max-width: 760px) {
-    nav ul {
-        flex-direction: column; /* Stacks nav items vertically */
-        width: 100%; /* Full width */
-        padding: 0; /* Removes any default padding */
+    header {
+        padding-top: 5px; /* Reduce top padding */
+        padding-bottom: 5px; /* Reduce bottom padding */
+    }
+
+    .logo img {
+        width: 80%; /* Reduce the logo size */
+        margin: 0 auto; /* Center the logo */
+    }
+
+    .nav-list ul {
+        display: none; /* Hide by default */
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-toggle {
+        display: block;
+        text-align: center;
+        cursor: pointer;
     }
 
     nav ul li {
-        text-align: center; /* Centers the links */
-        width: 100%; /* Full width */
-        padding: 10px 0; /* Adds vertical padding for better tap targets */
+        padding: 5px 0; /* Slightly reduce vertical padding */
     }
 
     .nav-list a {
-        display: block; /* Makes the link fill the li element for easier tapping */
-        padding: 10px; /* Adds padding to increase the tap area */
+        font-size: 12px; /* Reduce font size to conserve space */
+        padding: 8px 5px; /* Reduce horizontal padding */
+    }
+    .nav-list a:hover, .nav-list a:focus {
+        background-color: #f0f0f0; /* Light background on hover for visibility */
+        color: #000; /* Change text color on hover */
     }
 
     .mySlides img {
@@ -470,10 +492,3 @@ h1, h2 {
         margin-right: auto; /* Align to the right */
         max-width: 300px; /* Limit the maximum width of the description */
     }
-
-    header {
-        flex-direction: column; /* Stacks the logo and navigation vertically */
-        align-items: center; /* Aligns items to the center */
-        padding: 10px 0; /* Adds padding for better spacing */
-    }
-}
