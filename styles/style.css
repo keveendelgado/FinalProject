@@ -130,20 +130,24 @@ header {
     height: auto; /* Maintains the aspect ratio */
 }
 
-.trophies-section {
-    text-align: center;
-    padding: 20px;
-    background-color: #f4f4f4;
-    /* Set a specific height or make it relative to the viewport */
-    height: 80vh; /* Adjust this based on your design needs */
-    overflow: hidden; /* Prevents image overflow from the div */
+.trophies-section h2 {
+    background-color: #00529F;  /* Deep blue background */
+    color: white;               /* White text for contrast */
+    padding: 10px 20px;         /* Padding for better spacing */
+    border-radius: 5px;         /* Rounded corners for a smoother look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  /* Subtle shadow for depth */
+    margin: 20px 0;             /* Margin for spacing around the section */
 }
 
+/* Ensuring images and text in the trophy section are well presented */
 .trophies-section img {
-    width: 100%; /* Full width of the container */
-    height: 100%; /* Full height of the container */
-    object-fit: contain; /* Ensures the entire image is visible */
+    width: 100%;
+    max-width: 1500px;  /* Limiting image size for better layout control */
+    height: auto;
+    display: block;
+    margin: 10px auto;  /* Centers the image and adds spacing */
 }
+
 
 .sponsor-section {
     text-align: center; /* Center-align the image container */
@@ -285,8 +289,117 @@ body {
     margin: 0 auto; /* Center the image horizontally */
 }
 
+.la-liga-standings table {
+    width: 100%;
+    border-collapse: collapse;
+}
 
-@media (max-width: 700px) {
+.la-liga-standings th, .la-liga-standings td {
+    border: 10px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.la-liga-standings th {
+    background-color: #00529F;
+    color: white;
+}
+
+.win {
+    color: green;
+    margin-right: 5px;
+}
+
+.loss {
+    color: red;
+    margin-right: 5px;
+}
+
+.draw {
+    color: grey;
+    margin-right: 5px;
+}
+
+.la-liga-gallery {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4; /* Ensures there is contrast if the text is dark */
+    border-radius: 8px;
+    color: #333; /* Dark gray text for better readability */
+}
+
+.la-liga-gallery h2 {
+    background-color: #00529F; /* Deep blue, typical of Real Madrid branding */
+    color: white; /* White text for contrast */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+}
+
+
+.history-introduction, .early-years, .bernabeu-era, .galacticos-era {
+    margin: 20px;
+    padding: 20px;
+    color: black;
+    background-color: #f4f4f4; /* Light gray background for readability */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    color: #00529F; /* Consistent theme color for headers */
+}
+/* General styling for all history sections */
+.history-section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4; /* Light gray background for readability */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.history-section h2 {
+    color: #00529F; /* Consistent theme color for headers */
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;  /* Adjust this to fit your site's design */
+    margin: auto;
+    overflow: hidden;  /* Ensures nothing extends beyond the set dimensions */
+}
+
+/* Style the images */
+.mySlides img {
+    width: 100%;  /* Makes images fill the container */
+    height: 500px;  /* Fixed height for all images */
+    object-fit: cover;  /* Ensures images cover the area without distorting aspect ratios */
+}
+
+
+
+@media (max-width: 760px) {
     header {
         flex-direction: column; /* Stacks the logo and navigation vertically */
         align-items: center; /* Aligns items to the center */
@@ -301,7 +414,13 @@ body {
         text-align: center; /* Centers the links */
         width: 100%; /* Full width */
     }
+    .mySlides img {
+        height: 300px;  /* Smaller height for smaller devices */
+    }
 
+    .slideshow-container {
+        height: 300px;  /* Matching the new image height */
+    }
     .sponsors {
         width: 100%; /* Full width on mobile */
         max-width: 90%; /* Limit width to 90% for better readability */
