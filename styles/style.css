@@ -464,4 +464,22 @@ h1, h2 {
         height: auto; /* Maintain aspect ratio */
         overflow-x: hidden; /* Hide horizontal overflow */
     }
+    .la-liga-standings {
+        width: 100%; /* Make the table width 100% to fit within the available space */
+        overflow-x: auto; /* Add horizontal scroll if the table overflows */
+        -webkit-overflow-scrolling: touch; /* Allows momentum-based scrolling on iOS devices */
+    }
+
+    /* Additional styling to ensure table contents are readable */
+    .la-liga-standings table {
+        border-collapse: collapse; /* Optional: Improves the look of the table */
+        min-width: 600px; /* Set a minimum width to maintain table structure */
+    }
+
+    .la-liga-standings th,
+    .la-liga-standings td {
+        padding: 8px; /* Adds padding to cells for better readability */
+        text-align: left; /* Align text to the left, can adjust as needed */
+        border: 1px solid #ddd; /* Adds borders to cells for better visibility */
+    }
 }
