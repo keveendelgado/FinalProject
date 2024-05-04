@@ -24,10 +24,6 @@
 #return-to-top:hover {
     background-color: #000000; /* Button background color on hover */
 }
-nav {
-    overflow-x: hidden; /* Hide horizontal overflow */
-    width: 90%; /* Ensure nav is full width */
-}
 
 body {
     font-family: 'Cardo', serif; /* Applying Cardo to the body text */
@@ -415,80 +411,57 @@ h1, h2 {
     object-fit: cover;  /* Ensures images cover the area without distorting aspect ratios */
 }
 
+
 @media (max-width: 760px) {
     header {
-        padding-top: 5px; /* Reduce top padding */
-        padding-bottom: 5px; /* Reduce bottom padding */
+        text-align: center; /* Centers all content within the header */
+        padding: 5px 0; /* Minimize padding to reduce header size */
+        width: 100%; /* Full width */
     }
 
     .logo img {
-        width: 80%; /* Reduce the logo size */
+        width: 60%; /* Reduce the logo size */
         margin: 0 auto; /* Center the logo */
+        display: block; /* Block display for proper centering */
     }
 
-    .nav-list ul {
-        display: none; /* Hide by default */
-        width: 100%;
-        text-align: center;
+    nav {
+        width: 100%; /* Full width */
+        padding: 0 5px; /* Minimal padding to ensure fit */
+        box-sizing: border-box; /* Includes padding in width calculation */
     }
 
-    .nav-toggle {
-        display: block;
-        text-align: center;
-        cursor: pointer;
+    nav ul {
+        padding: 0;
+        margin: 0; /* Eliminate margin */
+        list-style: none; /* No bullets */
+        text-align: center; /* Center text */
+        display: flex; /* Flexbox for better alignment */
+        justify-content: center; /* Center flex items horizontally */
+        flex-wrap: wrap; /* Allow items to wrap if necessary */
     }
 
     nav ul li {
-        padding: 5px 0; /* Slightly reduce vertical padding */
+        padding: 5px 10px; /* Uniform padding */
     }
 
     .nav-list a {
-        font-size: 12px; /* Reduce font size to conserve space */
-        padding: 8px 5px; /* Reduce horizontal padding */
+        font-size: 12px; /* Smaller font size */
+        color: #333; /* Darker font color */
+        text-decoration: none; /* No underline */
+        padding: 8px; /* Sufficient padding for tapping */
     }
+
     .nav-list a:hover, .nav-list a:focus {
-        background-color: #f0f0f0; /* Light background on hover for visibility */
-        color: #000; /* Change text color on hover */
+        background-color: #f0f0f0; /* Light background on hover/focus */
+        color: #000; /* Text color change on hover/focus */
     }
 
-    .mySlides img {
-        min-height: 200px;  /* Ensures images are not too small */
-    }
-
-    .slideshow-container {
-        width: 100%; /* Ensures the container is responsive */
-        height: auto; /* Adjusts height based on image height */
-        max-height: 300px; /* Limits the container height */
-    }
-
-    .sponsors {
-        width: 100%; /* Full width on mobile */
-        max-width: none; /* Allows the image to use up to 100% of the width */
-        margin: 10px auto; /* Centers the image and adds vertical spacing */
-        display: block; /* Ensures the image is treated as a block-level element */
-        height: auto; /* Maintains the aspect ratio of the sponsors image */
-    }
-
-    .la-liga-standings {
-        width: 100%; /* Make the table width 100% to fit within the available space */
-        overflow-x: auto; /* Add horizontal scroll if the table overflows */
-    }
-
-    .team-content {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items horizontally */
-    }
-
-    .team-image {
-        max-width: 100%; /* Make the image fill the container width */
+    /* Ensure other elements fit well too */
+    .mySlides img, .slideshow-container, .sponsors, .la-liga-standings, .team-image, .team-content, .team-description {
+        width: 100%; /* Full width for responsiveness */
+        max-width: 100%; /* Restrict max-width to prevent overflow */
         height: auto; /* Maintain aspect ratio */
+        overflow-x: hidden; /* Hide horizontal overflow */
     }
-
-    .team-description {
-        text-align: center; /* Center the text */
-        margin-top: 10px; /* Add some space between the image and the text */
-        width: 90%; /* Set the width to 90% of the screen */
-        margin-left: auto; /* Align to the left */
-        margin-right: auto; /* Align to the right */
-        max-width: 300px; /* Limit the maximum width of the description */
-    }
+}
